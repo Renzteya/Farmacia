@@ -61,6 +61,27 @@ public class SystemView extends javax.swing.JFrame {
         btn_logout = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txt_product_code = new javax.swing.JTextField();
+        txt_product_name = new javax.swing.JTextField();
+        txt_product_unit_price = new javax.swing.JTextField();
+        txt_product_description = new javax.swing.JTextField();
+        txt_product_id = new javax.swing.JTextField();
+        cmb_product_category = new javax.swing.JComboBox<>();
+        btn_register_product = new javax.swing.JButton();
+        btn_update_product = new javax.swing.JButton();
+        btn_delete_product = new javax.swing.JButton();
+        btn_cancel_product = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        txt_search_product = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        products_table = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -281,18 +302,109 @@ public class SystemView extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 1010, 100));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1010, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 549, Short.MAX_VALUE)
-        );
+        jPanel4.setBackground(new java.awt.Color(152, 202, 255));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTabbedPane1.addTab("tab1", jPanel4);
+        jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Productos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setText("Codigo:");
+        jPanel12.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setText("Nombre:");
+        jPanel12.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setText("Precio de Venta:");
+        jPanel12.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setText("Descripcion:");
+        jPanel12.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel7.setText("Categoria:");
+        jPanel12.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel8.setText("Id:");
+        jPanel12.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, -1));
+        jPanel12.add(txt_product_code, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 165, 30));
+        jPanel12.add(txt_product_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 165, 30));
+        jPanel12.add(txt_product_unit_price, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 165, 30));
+        jPanel12.add(txt_product_description, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 50, 165, 30));
+
+        txt_product_id.setEditable(false);
+        txt_product_id.setEnabled(false);
+        jPanel12.add(txt_product_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 165, 30));
+
+        jPanel12.add(cmb_product_category, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 165, 30));
+
+        btn_register_product.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btn_register_product.setText("Registrar");
+        btn_register_product.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_register_productActionPerformed(evt);
+            }
+        });
+        jPanel12.add(btn_register_product, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 50, 90, 30));
+
+        btn_update_product.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btn_update_product.setText("Modificar");
+        jPanel12.add(btn_update_product, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, 90, 30));
+
+        btn_delete_product.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btn_delete_product.setText("Eliminar");
+        jPanel12.add(btn_delete_product, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 90, 30));
+
+        btn_cancel_product.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btn_cancel_product.setText("Cancelar");
+        jPanel12.add(btn_cancel_product, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 170, 90, 30));
+
+        jPanel4.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 20, 920, 270));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel9.setText("Buscar:");
+        jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 50, 20));
+
+        txt_search_product.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel4.add(txt_search_product, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 160, 30));
+
+        products_table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Id", "Codigo", "Nombre", "Descripcion", "Precio de Venta", "Cantidad", "Categoria"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(products_table);
+        if (products_table.getColumnModel().getColumnCount() > 0) {
+            products_table.getColumnModel().getColumn(0).setResizable(false);
+            products_table.getColumnModel().getColumn(1).setResizable(false);
+            products_table.getColumnModel().getColumn(2).setResizable(false);
+            products_table.getColumnModel().getColumn(3).setResizable(false);
+            products_table.getColumnModel().getColumn(4).setResizable(false);
+            products_table.getColumnModel().getColumn(5).setResizable(false);
+            products_table.getColumnModel().getColumn(6).setResizable(false);
+        }
+
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 910, 110));
+
+        jTabbedPane1.addTab("Productos", jPanel4);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -390,6 +502,10 @@ public class SystemView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn_register_productActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_register_productActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_register_productActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -426,10 +542,22 @@ public class SystemView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btn_cancel_product;
+    public javax.swing.JButton btn_delete_product;
     private javax.swing.JButton btn_foto;
     private javax.swing.JButton btn_logout;
+    public javax.swing.JButton btn_register_product;
+    public javax.swing.JButton btn_update_product;
+    public javax.swing.JComboBox<Object> cmb_product_category;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     public javax.swing.JLabel jLabelCategories;
     public javax.swing.JLabel jLabelCustomers;
     public javax.swing.JLabel jLabelEmployees;
@@ -441,6 +569,7 @@ public class SystemView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -457,6 +586,14 @@ public class SystemView extends javax.swing.JFrame {
     public javax.swing.JPanel jPanelReports;
     public javax.swing.JPanel jPanelSettigns;
     public javax.swing.JPanel jPanelSuppliers;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    public javax.swing.JTable products_table;
+    public javax.swing.JTextField txt_product_code;
+    public javax.swing.JTextField txt_product_description;
+    public javax.swing.JTextField txt_product_id;
+    public javax.swing.JTextField txt_product_name;
+    public javax.swing.JTextField txt_product_unit_price;
+    private javax.swing.JTextField txt_search_product;
     // End of variables declaration//GEN-END:variables
 }
