@@ -477,6 +477,11 @@ public class SystemView extends javax.swing.JFrame {
 
         btn_logout.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btn_logout.setText("Salir");
+        btn_logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_logoutActionPerformed(evt);
+            }
+        });
         jPanel3.add(btn_logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 40, -1, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 1010, 100));
@@ -1734,6 +1739,15 @@ public class SystemView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_register_productActionPerformed
 
+    private void btn_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logoutActionPerformed
+        // TODO add your handling code here:
+        if(evt.getSource() == btn_logout){
+            dispose();
+            LoginView login = LoginView();
+            login.setVisible(true);
+        }
+    }//GEN-LAST:event_btn_logoutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1771,42 +1785,42 @@ public class SystemView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_add_product_sale;
-    private javax.swing.JButton btn_add_product_to_buy;
-    private javax.swing.JButton btn_cancel_customer;
-    private javax.swing.JButton btn_cancel_employee;
-    private javax.swing.JButton btn_cancel_product;
-    private javax.swing.JButton btn_cancel_supplier;
-    private javax.swing.JButton btn_confirm_purchase;
+    public javax.swing.JButton btn_add_product_to_buy;
+    public javax.swing.JButton btn_cancel_customer;
+    public javax.swing.JButton btn_cancel_employee;
+    public javax.swing.JButton btn_cancel_product;
+    public javax.swing.JButton btn_cancel_supplier;
+    public javax.swing.JButton btn_confirm_purchase;
     public javax.swing.JButton btn_confirm_sale;
-    private javax.swing.JButton btn_delete_category;
-    private javax.swing.JButton btn_delete_customer;
-    private javax.swing.JButton btn_delete_employee;
-    private javax.swing.JButton btn_delete_product;
-    private javax.swing.JButton btn_delete_supplier;
+    public javax.swing.JButton btn_delete_category;
+    public javax.swing.JButton btn_delete_customer;
+    public javax.swing.JButton btn_delete_employee;
+    public javax.swing.JButton btn_delete_product;
+    public javax.swing.JButton btn_delete_supplier;
     private javax.swing.JButton btn_foto;
     private javax.swing.JButton btn_logout;
-    private javax.swing.JButton btn_modify_data;
-    private javax.swing.JButton btn_new_purchase;
+    public javax.swing.JButton btn_modify_data;
+    public javax.swing.JButton btn_new_purchase;
     public javax.swing.JButton btn_new_sale;
-    private javax.swing.JButton btn_register_category;
-    private javax.swing.JButton btn_register_customer;
-    private javax.swing.JButton btn_register_employee;
-    private javax.swing.JButton btn_register_product;
-    private javax.swing.JButton btn_register_supplier;
-    private javax.swing.JButton btn_remove_purchase;
+    public javax.swing.JButton btn_register_category;
+    public javax.swing.JButton btn_register_customer;
+    public javax.swing.JButton btn_register_employee;
+    public javax.swing.JButton btn_register_product;
+    public javax.swing.JButton btn_register_supplier;
+    public javax.swing.JButton btn_remove_purchase;
     public javax.swing.JButton btn_remove_sale;
-    private javax.swing.JButton btn_update_category;
-    private javax.swing.JButton btn_update_customer;
-    private javax.swing.JButton btn_update_employee;
-    private javax.swing.JButton btn_update_product;
-    private javax.swing.JButton btn_update_supplier;
-    private javax.swing.JTable categories_table;
-    private javax.swing.JComboBox<Object> cmb_product_category;
-    private javax.swing.JComboBox<String> cmb_purchase_supplier;
-    private javax.swing.JComboBox<String> cmb_rol;
-    private javax.swing.JComboBox<String> cmb_supplier_city;
-    private javax.swing.JTable customers_table;
-    private javax.swing.JTable employees_table;
+    public javax.swing.JButton btn_update_category;
+    public javax.swing.JButton btn_update_customer;
+    public javax.swing.JButton btn_update_employee;
+    public javax.swing.JButton btn_update_product;
+    public javax.swing.JButton btn_update_supplier;
+    public javax.swing.JTable categories_table;
+    public javax.swing.JComboBox<Object> cmb_product_category;
+    public javax.swing.JComboBox<String> cmb_purchase_supplier;
+    public javax.swing.JComboBox<String> cmb_rol;
+    public javax.swing.JComboBox<String> cmb_supplier_city;
+    public javax.swing.JTable customers_table;
+    public javax.swing.JTable employees_table;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1917,46 +1931,46 @@ public class SystemView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTable products_table;
-    private javax.swing.JTable purchase_table;
+    public javax.swing.JTextField jTextField1;
+    public javax.swing.JTable products_table;
+    public javax.swing.JTable purchase_table;
     public javax.swing.JTable sales_table;
-    private javax.swing.JTable suppliers_table;
-    private javax.swing.JTable table_all_purchases;
+    public javax.swing.JTable suppliers_table;
+    public javax.swing.JTable table_all_purchases;
     public javax.swing.JTable table_all_sales;
-    private javax.swing.JTextField txt_Id_profile;
-    private javax.swing.JTextField txt_address_profile;
-    private javax.swing.JTextField txt_category_Id;
-    private javax.swing.JTextField txt_category_name;
-    private javax.swing.JTextField txt_customer_Id;
-    private javax.swing.JTextField txt_customer_address;
-    private javax.swing.JTextField txt_customer_email;
-    private javax.swing.JTextField txt_customer_fullname;
-    private javax.swing.JTextField txt_customer_telephone;
-    private javax.swing.JTextField txt_email_profile;
-    private javax.swing.JTextField txt_employee_Id;
-    private javax.swing.JTextField txt_employee_address;
-    private javax.swing.JTextField txt_employee_email;
-    private javax.swing.JTextField txt_employee_fullname;
-    private javax.swing.JPasswordField txt_employee_password;
-    private javax.swing.JTextField txt_employee_telephone;
-    private javax.swing.JTextField txt_employee_username;
-    private javax.swing.JTextField txt_name_profile;
-    private javax.swing.JPasswordField txt_password_modify;
-    private javax.swing.JPasswordField txt_password_modify_confirm;
-    private javax.swing.JTextField txt_phone_profile;
-    private javax.swing.JTextField txt_product_code;
-    private javax.swing.JTextField txt_product_description;
-    private javax.swing.JTextField txt_product_id;
-    private javax.swing.JTextField txt_product_name;
-    private javax.swing.JTextField txt_product_unit_price;
-    private javax.swing.JTextField txt_purchase_amount;
-    private javax.swing.JTextField txt_purchase_id;
-    private javax.swing.JTextField txt_purchase_price;
-    private javax.swing.JTextField txt_purchase_product_code;
-    private javax.swing.JTextField txt_purchase_product_name;
-    private javax.swing.JTextField txt_purchase_subtotal;
-    private javax.swing.JTextField txt_purchase_total_to_pay;
+    public javax.swing.JTextField txt_Id_profile;
+    public javax.swing.JTextField txt_address_profile;
+    public javax.swing.JTextField txt_category_Id;
+    public javax.swing.JTextField txt_category_name;
+    public javax.swing.JTextField txt_customer_Id;
+    public javax.swing.JTextField txt_customer_address;
+    public javax.swing.JTextField txt_customer_email;
+    public javax.swing.JTextField txt_customer_fullname;
+    public javax.swing.JTextField txt_customer_telephone;
+    public javax.swing.JTextField txt_email_profile;
+    public javax.swing.JTextField txt_employee_Id;
+    public javax.swing.JTextField txt_employee_address;
+    public javax.swing.JTextField txt_employee_email;
+    public javax.swing.JTextField txt_employee_fullname;
+    public javax.swing.JPasswordField txt_employee_password;
+    public javax.swing.JTextField txt_employee_telephone;
+    public javax.swing.JTextField txt_employee_username;
+    public javax.swing.JTextField txt_name_profile;
+    public javax.swing.JPasswordField txt_password_modify;
+    public javax.swing.JPasswordField txt_password_modify_confirm;
+    public javax.swing.JTextField txt_phone_profile;
+    public javax.swing.JTextField txt_product_code;
+    public javax.swing.JTextField txt_product_description;
+    public javax.swing.JTextField txt_product_id;
+    public javax.swing.JTextField txt_product_name;
+    public javax.swing.JTextField txt_product_unit_price;
+    public javax.swing.JTextField txt_purchase_amount;
+    public javax.swing.JTextField txt_purchase_id;
+    public javax.swing.JTextField txt_purchase_price;
+    public javax.swing.JTextField txt_purchase_product_code;
+    public javax.swing.JTextField txt_purchase_product_name;
+    public javax.swing.JTextField txt_purchase_subtotal;
+    public javax.swing.JTextField txt_purchase_total_to_pay;
     public javax.swing.JTextField txt_sale_customer_id;
     public javax.swing.JTextField txt_sale_customer_name;
     public javax.swing.JTextField txt_sale_price;
@@ -1967,15 +1981,19 @@ public class SystemView extends javax.swing.JFrame {
     public javax.swing.JTextField txt_sale_stock;
     public javax.swing.JTextField txt_sale_subtotal;
     public javax.swing.JTextField txt_sale_total_to_pay;
-    private javax.swing.JTextField txt_search_category;
-    private javax.swing.JTextField txt_search_employee;
-    private javax.swing.JTextField txt_search_product;
-    private javax.swing.JTextField txt_search_supplier;
-    private javax.swing.JTextField txt_supplier_Id;
-    private javax.swing.JTextField txt_supplier_address;
-    private javax.swing.JTextField txt_supplier_description;
-    private javax.swing.JTextField txt_supplier_email;
-    private javax.swing.JTextField txt_supplier_name;
-    private javax.swing.JTextField txt_supplier_telephone;
+    public javax.swing.JTextField txt_search_category;
+    public javax.swing.JTextField txt_search_employee;
+    public javax.swing.JTextField txt_search_product;
+    public javax.swing.JTextField txt_search_supplier;
+    public javax.swing.JTextField txt_supplier_Id;
+    public javax.swing.JTextField txt_supplier_address;
+    public javax.swing.JTextField txt_supplier_description;
+    public javax.swing.JTextField txt_supplier_email;
+    public javax.swing.JTextField txt_supplier_name;
+    public javax.swing.JTextField txt_supplier_telephone;
     // End of variables declaration//GEN-END:variables
+
+    private LoginView LoginView() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

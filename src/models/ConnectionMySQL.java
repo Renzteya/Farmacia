@@ -8,10 +8,10 @@ import java.sql.SQLException;
 
 public class ConnectionMySQL {
     
-    private String database_name = "Farmacia";
+    private String database_name = "pharmacy_database";
     private String user = "root";
     private String password = "root";
-    private String url = "jdbc:mysql://localhost:8080/" + database_name;
+    private String url = "jdbc:mysql://localhost:3306/" + database_name;
     Connection conn = null;
     
     public Connection getConnection(){
