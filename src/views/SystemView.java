@@ -7,10 +7,13 @@ package views;
 import controllers.CustomersController;
 import controllers.EmployeesController;
 import controllers.SettingsController;
+import controllers.SuppliersController;
 import models.Customers;
 import models.CustomersDao;
 import models.Employees;
 import models.EmployeesDao;
+import models.Suppliers;
+import models.SuppliersDao;
 
 /**
  *
@@ -24,6 +27,10 @@ public class SystemView extends javax.swing.JFrame {
     //Clientes
     Customers customer = new Customers();
     CustomersDao customersDao = new CustomersDao();
+    
+    //Proveedores
+    Suppliers supplier = new Suppliers();
+    SuppliersDao supplierDao = new SuppliersDao();
     
     public SystemView() {
         initComponents();
@@ -43,6 +50,10 @@ public class SystemView extends javax.swing.JFrame {
         //Controlador de clientes
         CustomersController customer_account = new CustomersController(customer, customersDao, this);
         customer_account.listAllCustomers();
+        
+        //Controlador de proveedores
+        SuppliersController supplier_account = new SuppliersController(supplier, supplierDao, this);
+        supplier_account.listAllSuppliers();
         
         
     }
@@ -1836,7 +1847,7 @@ public class SystemView extends javax.swing.JFrame {
     public javax.swing.JButton btn_update_supplier;
     public javax.swing.JTable categories_table;
     public javax.swing.JComboBox<Object> cmb_product_category;
-    public javax.swing.JComboBox<String> cmb_purchase_supplier;
+    public javax.swing.JComboBox<Object> cmb_purchase_supplier;
     public javax.swing.JComboBox<String> cmb_rol;
     public javax.swing.JComboBox<String> cmb_supplier_city;
     public javax.swing.JTable customers_table;
