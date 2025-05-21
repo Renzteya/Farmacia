@@ -394,7 +394,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanelSettigns">
+        <Container class="javax.swing.JPanel" name="jPanelSettings">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3d" green="2d" red="12" type="rgb"/>
@@ -414,18 +414,18 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="15" max="32767" attributes="0"/>
-                      <Component id="jLabelSettigns" min="-2" pref="185" max="-2" attributes="0"/>
+                      <Component id="jLabelSettings" min="-2" pref="185" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabelSettigns" alignment="0" pref="35" max="32767" attributes="0"/>
+                  <Component id="jLabelSettings" alignment="0" pref="35" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabelSettigns">
+            <Component class="javax.swing.JLabel" name="jLabelSettings">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
@@ -1456,15 +1456,15 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txt_sale_price" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txt_sale_subtotal" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txt_sale_stock" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txt_sale_price" alignment="0" pref="90" max="32767" attributes="0"/>
+                                      <Component id="txt_sale_subtotal" alignment="0" pref="90" max="32767" attributes="0"/>
+                                      <Component id="txt_sale_stock" alignment="0" pref="90" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txt_sale_customer_name" pref="73" max="32767" attributes="0"/>
+                                  <Component id="txt_sale_customer_name" pref="99" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -3364,7 +3364,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="txt_password_modify" min="-2" pref="30" max="-2" attributes="0"/>
@@ -3409,7 +3409,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="83" max="32767" attributes="0"/>
+                          <EmptySpace pref="133" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
