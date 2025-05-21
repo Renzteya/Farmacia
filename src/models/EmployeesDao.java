@@ -109,7 +109,7 @@ public class EmployeesDao {
             Employees employee = new Employees();
             employee.setId(rs.getInt("id"));
             employee.setFull_name(rs.getString("full_name"));
-            employee.setUsername(rs.getString("username"));
+            employee.setUsername(rs.getString("user_name"));
             employee.setAddress(rs.getString("address"));
             employee.setTelephone(rs.getString("telephone"));
             employee.setEmail(rs.getString("email"));
@@ -125,7 +125,7 @@ public class EmployeesDao {
     
     //Modificar empleado
     public boolean updateEmployeeQuery(Employees employee){
-        String query = "UPDATE employees SET full_name = ?, username = ?, address = ?, telephone = ?, email = ?, rol = ?, updated = ?"
+        String query = "UPDATE employees SET full_name = ?, user_name = ?, address = ?, telephone = ?, email = ?, rol = ?, updated = ?"
                 + "WHERE id = ?";
         
         Timestamp datetime = new Timestamp(new Date().getTime());
@@ -165,7 +165,7 @@ public class EmployeesDao {
     
     //Cambiar la contraseña
     public boolean updateEmployeePassword(Employees employee){
-        String query = "UPDATE employees SET password = ? WHERE username = '" + username_user + "'";
+        String query = "UPDATE employees SET password = ? WHERE user_name = '" + username_user + "'";
         try{
             conn = cn.getConnection();
             pst = conn.prepareStatement(query);

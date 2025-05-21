@@ -4,7 +4,10 @@
  */
 package views;
 
+import controllers.EmployeesController;
 import controllers.SettingsController;
+import models.Employees;
+import models.EmployeesDao;
 
 /**
  *
@@ -12,9 +15,9 @@ import controllers.SettingsController;
  */
 public class SystemView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form SystemView
-     */
+    Employees employee = new Employees();
+    EmployeesDao employeesDao = new EmployeesDao();
+    
     public SystemView() {
         initComponents();
         setSize(1208,680);
@@ -25,6 +28,11 @@ public class SystemView extends javax.swing.JFrame {
         //Controlador del Settigns
         SettingsController setting = new SettingsController(this);
         this.repaint();
+        
+        //Controlador de Empleados
+        EmployeesController employee_account = new EmployeesController(employee, employeesDao, this);
+        
+        
     }
 
     /**
@@ -1930,7 +1938,7 @@ public class SystemView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    public javax.swing.JTabbedPane jTabbedPane1;
     public javax.swing.JTextField jTextField1;
     public javax.swing.JTable products_table;
     public javax.swing.JTable purchase_table;
