@@ -4,8 +4,11 @@
  */
 package views;
 
+import controllers.CustomersController;
 import controllers.EmployeesController;
 import controllers.SettingsController;
+import models.Customers;
+import models.CustomersDao;
 import models.Employees;
 import models.EmployeesDao;
 
@@ -17,6 +20,10 @@ public class SystemView extends javax.swing.JFrame {
 
     Employees employee = new Employees();
     EmployeesDao employeesDao = new EmployeesDao();
+    
+    //Clientes
+    Customers customer = new Customers();
+    CustomersDao customersDao = new CustomersDao();
     
     public SystemView() {
         initComponents();
@@ -31,6 +38,11 @@ public class SystemView extends javax.swing.JFrame {
         
         //Controlador de Empleados
         EmployeesController employee_account = new EmployeesController(employee, employeesDao, this);
+        employee_account.listAllEmployees();
+        
+        //Controlador de clientes
+        CustomersController customer_account = new CustomersController(customer, customersDao, this);
+        customer_account.listAllCustomers();
         
         
     }
@@ -161,7 +173,7 @@ public class SystemView extends javax.swing.JFrame {
         btn_delete_customer = new javax.swing.JButton();
         btn_cancel_customer = new javax.swing.JButton();
         jLabel23 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txt_search_customer = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
         customers_table = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
@@ -1064,13 +1076,13 @@ public class SystemView extends javax.swing.JFrame {
         jLabel23.setText("Buscar:");
         jPanel6.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 70, 30));
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txt_search_customer.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txt_search_customer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txt_search_customerActionPerformed(evt);
             }
         });
-        jPanel6.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 160, 30));
+        jPanel6.add(txt_search_customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 160, 30));
 
         customers_table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1735,9 +1747,9 @@ public class SystemView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_supplier_emailActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txt_search_customerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_search_customerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txt_search_customerActionPerformed
 
     private void btn_add_product_to_buyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_product_to_buyActionPerformed
         // TODO add your handling code here:
@@ -1939,7 +1951,6 @@ public class SystemView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     public javax.swing.JTabbedPane jTabbedPane1;
-    public javax.swing.JTextField jTextField1;
     public javax.swing.JTable products_table;
     public javax.swing.JTable purchase_table;
     public javax.swing.JTable sales_table;
@@ -1990,6 +2001,7 @@ public class SystemView extends javax.swing.JFrame {
     public javax.swing.JTextField txt_sale_subtotal;
     public javax.swing.JTextField txt_sale_total_to_pay;
     public javax.swing.JTextField txt_search_category;
+    public javax.swing.JTextField txt_search_customer;
     public javax.swing.JTextField txt_search_employee;
     public javax.swing.JTextField txt_search_product;
     public javax.swing.JTextField txt_search_supplier;
